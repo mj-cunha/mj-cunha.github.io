@@ -1,0 +1,825 @@
+<hmtl>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MJ_Cunha</title>
+    </head>
+
+    <body background="imagens/fundo.png" width="100%"> 
+        <div style="
+        position:fixed;
+        background-color: #ff800925;
+        height:fit-content;
+        padding-right:1.5vw;
+        padding-left:1.5vw;
+        padding-bottom:1vw;
+        padding-top:1vw;
+        border-radius:5px;
+        box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.488);
+        align-content: center;
+        top: 5%; right:2%;"><a style="text-decoration: none; color: #2b1600; font-size: 3vw;" href="#map_ID" 
+        onmouseenter="style='text-decoration: none; color: #2b1600; font-size: 3.5vw;'"
+        onmouseleave="style='text-decoration: none; color: #2b1600; font-size: 3vw;'" >Estúdio</a></div>
+
+        <div style="
+        position:fixed;
+        background-color: #ff800925;
+        height:fit-content;
+        padding-right:1.5vw;
+        padding-left:1.5vw;
+        padding-bottom:1vw;
+        padding-top:1vw;
+        border-radius:5px;
+        box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.488);
+        align-content: center;
+        bottom:5%; right:2%;"><a style="text-decoration: none; color: #2b1600; font-size: 2.5vw;" href="cv/cv.html" 
+        onmouseenter="style='text-decoration: none; color: #2b1600; font-size: 3vw;'"
+        onmouseleave="style='text-decoration: none; color: #2b1600; font-size: 2.5vw;'" >CV</a></div>
+
+        <img src="imagens/linhas_gif.gif" alt="entrada" width="100%" >
+
+    <map id="map_ID" name="navigatemap">
+      <area shape="rect"  
+            alt="boneca" 
+            title="3D" 
+            coords="478,580,644,744"
+            href="#tresd"  
+            onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+            onMouseOver="navbar.src='imagens/boneca_real.gif'" 
+        />
+      <area shape="rect"
+            alt="quadro_ines" 
+            title="Vídeo" 
+            href="#video" 
+            coords="647,478,364,290"
+            onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+            onMouseOver="navbar.src='imagens/quadro1_real.png'" 
+        />
+      <area shape="rect" 
+            alt="aplique" 
+            title="Ethicco" 
+            href="#ethicco" 
+            coords="1399,276,1538,440"
+            onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+            onMouseOver="navbar.src='imagens/aplique_real.png'" 
+        />
+    <area shape="rect" 
+        alt="quadro" 
+        title="Ilustração digital" 
+        href="#ilustracao" 
+        coords="1569,370,1721,722"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/quadro2_real.png'" 
+    />
+
+    <area shape="rect" 
+        alt="malinha_pecas" 
+        title="Peças cabedal" 
+        href="#pcabedal" 
+        coords="249,474,23,555"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/mala_pecas_real.gif'" 
+    />
+
+    <area shape="rect" 
+        alt="candeeiro_cortica" 
+        title="Peças utilitárias" 
+        href="#putilitarias" 
+        coords="5,266,130,446"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/candeeiro_real.png'" 
+    />
+
+    <area shape="rect" 
+        alt="portatil" 
+        title="Websites" 
+        href="#sites" 
+        coords="745,547,979,612"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/portatil_real.gif'" 
+    />
+
+    <area shape="rect" 
+        alt="balde" 
+        title="Restos"
+        href="#restos" 
+        coords="1050,755,1137,870"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/balde_real.png'" 
+    />
+
+    <area shape="rect" 
+        alt="impressora" 
+        title="Material impresso" 
+        href="#livros" 
+        coords="744,772,884,901"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/impressora_real.png'" 
+    />
+
+    <area shape="rect" 
+        alt="papel" 
+        title="Design gráfico" 
+        href="#design" 
+        coords="1044,895,1159,1017"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/papel_real.png'" 
+    />
+
+    <area shape="rect" 
+        alt="camara" 
+        title="Manipulação fotográfica" 
+        href="#fotografia" 
+        coords="1047,421,1159,600"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/camara_real.png'" 
+    />
+
+    <area shape="rect" 
+        alt="mala_ferramentas" 
+        title="Stop Motion" 
+        href="#motion" 
+        coords="898,763,1030,883"
+        onMouseOut="navbar.src='imagens/fundo_toons.png'" 
+        onMouseOver="navbar.src='imagens/mala_ferramentas_real.gif'" 
+    />
+    </map> 
+  
+    <img src="imagens/fundo_toons.png"
+        width="100%"
+        id="img_ID"
+       name="navbar" 
+       usemap="#navigatemap" />
+
+    <script>
+        window.onload = function () {
+    var ImageMap = function (map, img) {
+            var n,
+                areas = map.getElementsByTagName('area'),
+                len = areas.length,
+                coords = [],
+                previousWidth = 1920;
+            for (n = 0; n < len; n++) {
+                coords[n] = areas[n].coords.split(',');
+            }
+            this.resize = function () {
+                var n, m, clen,
+                    x = img.offsetWidth / previousWidth;
+                for (n = 0; n < len; n++) {
+                    clen = coords[n].length;
+                    for (m = 0; m < clen; m++) {
+                        coords[n][m] *= x;
+                    }
+                    areas[n].coords = coords[n].join(',');
+                }
+                previousWidth = img.offsetWidth;
+                return true;
+            };
+            window.onresize = this.resize;
+        },
+        imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
+    imageMap.resize();
+    return;
+}
+    </script>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="ethicco" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Ethicco</h1></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left; margin-top: 0;">A Ethicco</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">O 
+    nosso maior projeto, até ao momento, foi a criação da própria Ethicco, que começou pela criação do conceito da empresa, logo e todos os 
+    aspetos gráficos, como manual de normas gráficas e estacionários e não parou até chegarmos á criação de website dinâmico com interações 
+    avançadas, vídeos, elementos 3d e muito mais, tudo para a nossa empresa.</p> <img src="imagens/painel_semantico.png" width="100%">
+    <img src="imagens/manual_de_normas_graficas.png" width="100%"> <img src="imagens/manual_de_normas_graficas15.png" width="100%">
+    <img src="imagens/outdoor2.jpg" width="100%"><img src="imagens/ethicco_mascote_2.png" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Natural da Terra</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">Neste projeto foi nos pedido o branding mais lowcost 
+    mas amigo do ambiente que conseguíssemos desenhar. O cliente, uma pequena produtora de compotas e produtos hortícolas só 
+    trabalha com produtos biológicos. O logotipo em carimbo e os materiais reciclados assentavam que nem uma luva e o estilo 
+    desenhado á mão era também uma exigência.</p>
+    <img src="imagens/Stationery_Mockup_2.jpg" width="100%"><img src="imagens/Stationery_Mockup_4.jpg" width="100%">
+    <img src="imagens/manual_de_normas_graficas_natural_terra.png" width="100%"><img src="imagens/Wooden_Stamp_Mockup.png" width="100%">
+    <img src="imagens/manual_de_normas_graficas_natural_terra4.png" width="100%"></div>
+    
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Natural da Terra</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">A base deste projeto foi a criação de 
+    uma marca, manual de normas gráficas e um website para uma empresa de artesanato ecológico, a Pegada dos Diabos, que já existia mas sem um 
+    presença digital ou uma imagem pensada. Foi criado um logotipo com a marca inicial, que tinha já um grande valor sentimental para o cliente, 
+    sendo a marca da pata a do seu próprio companheiro, assim como todo o visual que acompanha agora a empresa.</p>
+    <img src="imagens/Stationary_Mockup_1.jpeg" width="100%"><img src="imagens/fotos budha para escolher 025.png" width="100%">
+    <img src="imagens/manual_de_normas_graficas_pegada_diabos.jpeg" width="100%"> <img src="imagens/Wooden_Stamp_Mockup.png" width="100%">
+    <img src="imagens/manual_de_normas_graficas_pegada_diabos3.jpeg" width="100%"><img src="imagens/logo_cabedalpeq2.png" width="70%">
+    <img src="imagens/top-view-leather-with-thread.jpg" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left; margin-top: 0;">Vasse Catarse</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">A nossa primeira criação para impressão, 
+    um livro de poesia ilustrada para adultos. Os textos uma coletânea de poesias soltas com a catarse linha condutora, As pinturas, aquarelas 
+    inspiradas nas poesias, o design completamente fora da caixa. O resultado foi fantástico.</p>
+    <img src="imagens/vasse_catarse (1).jpg" width="100%"><img src="imagens/vasse_catarse (2).jpg" width="100%"><img src="imagens/vasse_catarse (3).jpeg" width="100%">
+    <img src="imagens/vasse_catarse (4).jpg" width="100%"><img src="imagens/vasse_catarse (5).jpg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="video" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Vídeo</h1></div>
+    
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Apresentação site</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/v-z8r2Tao10" title="Apresentação site" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Vídeo Ethicco</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/qmDh0TqlbLg" title="Ethicco vídeo1" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Vídeo Ethicco II</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/goOYWzEvg1k" title="Ethicco vídeo 2" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Vídeo Ethicco III</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/yU2HNGO9Cos" title="Ethicco vídeo 3" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Vídeo Ethicco método</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/PRxlgqH9qt0" title="Ethicco método" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Animação Logo</h1> 
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/lqhpj-3QpaI" title="logo1" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Animação Logo II</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/0xWoyZirfII" title="logo2" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Animação Logo III</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/6FCGeJ3WG68" title="logo3" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Animação Logo IV</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/DFqQB1ZjHu0" title="logo4" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Animação Logo V</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/cNqPC-EUl7U" title="logo5" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 107vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Vídeo Vasse Catarse V</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/Y99STlWGowM" title="Poesia de Tiago Quintans animada." frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="tresd" style="color: #2b1600; font-size: 3.5vw; text-align:center;">3D</h1></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Estúdio</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">O estúdio foi o meu primeiro projeto
+    3d com um intuito definido. É uma representação 3d do meu estúdio real, contendo todas as peças necessárias à realização do meu trabalho.
+    Todas as peças foram modeladas e com mapas UV e texturas realizadas por mim.</p>
+    <img src="imagens/estudio (1).png" width="100%"><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">Este mesmo estúdio e objetos foram utilizados em três situações
+    diferentes: na sua versão original foi utilizado para realizar uma animação a demonstrar o estúdio, numa segunda versão, com uma disposição 
+    diferente de paredes foi utilizado para expor peças e renderizar imagens, e por fim uma terceira versão, realizada da segunda versão mas com 
+    uma textura diferente, foi utilizado para a construção desta página HTML.</p><img src="imagens/estudio (3).jpg" width="100%"><img src="imagens/estudio (4).jpg" width="100%">
+    <img src="imagens/estudio (2).jpg" width="100%"><img src="imagens/estudio (5).png" width="100%"><img src="imagens/estudio (6).jpg" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A caixa mais simples</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">O meu primeiro projeto 3d. <br><br>Modelação, 
+    mapa UV, textura, ambiente e luzes.</p>  <img src="imagens/Sequência 01 (2).gif" width="100%"> <img src="imagens/box_outdoor_dayv3.jpg" width="100%">
+    <img src="imagens/box_indoor_day.png" width="100%"> <img src="imagens/box_indoor_night.png" width="100%"><img src="imagens/box_textura.jpeg" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">O Laccarita</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">O minha primeira personagem, a mascote da Ethicco
+    passado para 3d. <br><br>Modelação, mapa UV, textura, esqueleto e controladores.</p>  <img src="imagens/mascote.gif" width="100%"> <img src="imagens/mascote_modelacao_lado1.png" width="100%">
+    <img src="imagens/mascote_modelacao_frente.png" width="100%"> <img src="imagens/mascote_modelacao_lado2.png" width="100%"><img src="imagens/mascote_simples_frente.png" width="100%">
+    <img src="imagens/mascote_simples_lado1.png" width="100%"> <img src="imagens/mascote_simples_lado2.png" width="100%"> <img src="imagens/mascote_quase_final.png" width="100%">
+    <img src="imagens/mascote_textura_azul.png" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Enrolado em poesia</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">O minha segunda personagem. AKA o poeta
+    mumificado. <br><br>Modelação, mapa UV, textura, esqueleto e controladores.</p>  <img src="imagens/boneco.gif" width="120%"> <img src="imagens/olho_textura.png" width="80%">
+    <img src="imagens/12.jpg" width="100%"> <img src="imagens/boneco_vestes_textura_cor.png" width="100%"><img src="imagens/13.jpg" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Boneca e borboletas</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">O minha terceira personagem. E a mais fofa.
+    <br><br>Modelação, mapa UV, textura, esqueleto, controladores, vestido e cabelo, feitos com ncloth e nhair respectivamente, assim como borboletas 
+    criadas apenas por texturas num plano.</p>  <img src="imagens/Sequência 01.gif" width="100%"> <img src="imagens/boneca_corpo_textura.png" width="100%">
+    <img src="imagens/boneca2.jpg" width="100%"> <img src="imagens/boneca_vestido_cor_claro.png" width="100%"><img src="imagens/boneca_macro.jpg" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Caixinha Ethicco</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">Uma caixinha para a Ethicco, para utilizações publicitárias.
+    <br><br>Modelação, mapa UV, textura e luzes.</p>  <img src="imagens/construcao_4.jpg" width="110%"> <img src="imagens/caixa_tampa_textura.jpg" width="100%">
+    <img src="imagens/construcao_1.png" width="100%"> <img src="imagens/caixa_plantas_textura.jpeg" width="100%"><img src="imagens/construcao_2.jpg" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Poly Pochontas</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">Inspirada num brinquedo real dos anos 90.
+    <br><br>Modelação, mapa UV, textura e controladores de abertura.</p>  <img src="imagens/polly.gif" width="100%">
+    <img src="imagens/polly (1).png" width="100%"> <img src="imagens/polly (2).png" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Material Ethicco</h1> <h1></h1><p style="color: #190d00; 
+    font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;"> Logótipo completo da Ethicco modelado 
+    para utilizações gráficas mais complexas, como vídeo. <br><br>Modelação, mapa UV e texturas.</p>
+    <img src="imagens/logo_gif.gif" width="100%"> <img src="imagens/logo_modelacao_frente.png" width="100%"> <img src="imagens/logo_modelacao_letras_cima.png" width="100%">
+    <img src="imagens/logo_textura_vidro_cima.png" width="100%"><img src="imagens/logo_textura_tronco_letras.png" width="100%">
+    <img src="imagens/logo_textura_terra.png" width="100%"><img src="imagens/logo_textura_roxo_letras.png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="ilustracao" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Ilustração digital</h1></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">O ovo</h1>
+    <img src="imagens/ilustracao.png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A maçã</h1>
+    <img src="imagens/ilustracao (1).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A paixão das cerajas</h1>
+    <img src="imagens/ilustracao (4).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A dragão</h1>
+    <img src="imagens/ilustracao (5).jpeg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Funghi</h1>
+    <img src="imagens/ilustracao (6).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Funghi II</h1>
+    <img src="imagens/ilustracao (7).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A praia por cima</h1>
+    <img src="imagens/ilustracao (3).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A praia por baixo</h1>
+    <img src="imagens/ilustracao (2).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">O Laccarita</h1>
+    <img src="imagens/ilustracao (12).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Tim</h1>
+    <img src="imagens/ilustracao (10).jpeg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Mãe</h1>
+    <img src="imagens/ilustracao (8).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Portugal</h1>
+    <img src="imagens/ilustracao (9).png" width="50%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Story board</h1>
+    <img src="imagens/ilustracao (14).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Provérbio popular</h1>
+    <img src="imagens/ilustracao (13).jpg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Copo ou não</h1>
+    <img src="imagens/ilustracao (11).jpg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Olho</h1>
+    <img src="imagens/ilustracao (16).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Beleza</h1>
+    <img src="imagens/ilustracao (17).jpg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Sem comentários</h1>
+    <img src="imagens/ilustracao (15).jpeg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="pcabedal" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Peças de cabedal</h1></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="putilitarias" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Peças utilitárias</h1></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Bancada de paletes</h1>
+    <img src="imagens/utilitarias (2).jpg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="sites" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Websites</h1></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Este documento</h1>
+    <p style="color: #190d00;font-size: 2vw; padding: 10%; text-align: left; align-self: center; margin-top: 0; margin-bottom: 0;">
+    Este documento é na realidade uma página HTML criada por mim de raiz.</p></div>
+    
+    <div style="height: 100vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Site Ethicco</h1>
+    <iframe src="ethicco/index1.html" width="100%" height="90%" style="border:none;"></iframe></div>
+    
+    <div style="height: 100vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Site Parallax</h1>
+    <iframe src="parallax/parallax.html" width="100%" height="90%" style="border:none;"></iframe></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="livros" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Livros</h1></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Vasse Catarse - capa</h1>
+    <img src="imagens/" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Shoots booklet</h1>
+    <img src="imagens/shots_book-3.jpg" width="100%"><img src="imagens/shots_book-1.png" width="100%"> <img src="imagens/shots_book-13.png" width="100%">
+    <img src="imagens/shots_book-18.png" width="100%"><img src="imagens/shots_book-2.png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Flores para o Algernon - capa</h1>
+    <img src="imagens/maria_cunha_livro.png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="design" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Design gráfico</h1></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Estacionários Ethicco</h1> <h1></h1>
+    <img src="imagens/grafico_ethicco (1).jpeg" width="100%"><img src="imagens/grafico_ethicco (2).jpeg" width="100%">
+    <img src="imagens/grafico_ethicco (4).png" width="100%"> <img src="imagens/grafico_ethicco (3).jpeg" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Estacionários Natural da Terra</h1> <h1></h1>
+    <img src="imagens/grafico_natural (2).png" width="100%"><img src="imagens/grafico_natural (1).png" width="100%">
+    <img src="imagens/grafico_natural (3).png" width="100%"> <img src="imagens/grafico_natural (4).jpeg" width="100%"></div>
+
+    <div style="display: grid; grid-template-columns: 40% 60%;height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Estacionários Pegada dos Diabos</h1> <h1></h1>
+    <img src="imagens/grafico_pegada (1).png" width="100%"><img src="imagens/grafico_pegada (3).png" width="100%">
+    <img src="imagens/grafico_pegada (2).png" width="100%"> <img src="imagens/grafico_pegada (4).jpeg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Poster</h1>
+    <img src="imagens/grafico_poster (1).png" width="100%"></div>  
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Poster II</h1>
+    <img src="imagens/grafico_poster (2).png" width="100%"></div> 
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Poster III</h1>
+    <img src="imagens/grafico_poster (3).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Poster IV</h1>
+    <img src="imagens/grafico_poster (4).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Poster V</h1>
+    <img src="imagens/grafico_poster (5).jpeg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="fotografia" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Manipulação fotográfica</h1></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Álbum</h1>
+    <img src="imagens/fotografica (11).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Novas antiguidades</h1>
+    <img src="imagens/fotografica (10).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Novas antiguidades II</h1>
+    <img src="imagens/fotografica (12).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Novas antiguidades III</h1>
+    <img src="imagens/fotografica (13).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A natureza e o dinheiro</h1>
+    <img src="imagens/fotografica (3).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A natureza e o dinheiro II</h1>
+    <img src="imagens/fotografica (2).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A natureza e o dinheiro III</h1>
+    <img src="imagens/fotografica (4).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A natureza e o dinheiro IV</h1>
+    <img src="imagens/fotografica (5).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A natureza solar</h1>
+    <img src="imagens/fotografica (6).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A natureza solar II</h1>
+    <img src="imagens/fotografica (7).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Foto ou pintura</h1>
+    <img src="imagens/fotografica (9).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Arrejando</h1>
+    <img src="imagens/fotografica (8).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Restauro</h1>
+    <img src="imagens/fotografica (20).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Limpeza</h1>
+    <img src="imagens/fotografica (14).jpeg" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Texturas</h1>
+    <img src="imagens/fotografica (17).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Cor</h1>
+    <img src="imagens/fotografica (21).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Água</h1>
+    <img src="imagens/fotografica (18).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Fogo</h1>
+    <img src="imagens/fotografica (19).png" width="100%"></div>
+    
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Pop</h1>
+    <img src="imagens/fotografica (15).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Eu</h1>
+    <img src="imagens/fotografica (1).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Jim</h1>
+    <img src="imagens/mobil.png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">A princesa</h1>
+    <img src="imagens/fotografica (16).png" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Dino</h1>
+    <img src="imagens/fotografica.gif" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Raptar ou semear?</h1>
+    <img src="imagens/fotografica (2).gif" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Pirilampos ou gambozinos?</h1>
+    <img src="imagens/fotografica (3).gif" width="100%"></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="motion" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Stop Motion</h1></div>
+    
+    <div style="height: 100vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Primeira Stop motion</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/eFbVA79ClEc" title="Primeira stop motion sem voz" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: 100vh;  margin-right: 5vw;
+    margin-left: 5vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 style="color: #2b1600; font-size: 3vw; text-align:left;margin-top: 0;">Stopmotion V2</h1>
+    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/XU0yRQIN5s0" title="Stopmotion v2" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+    <div style="height: fit-content;  margin-right: 10vw;
+    margin-left: 10vw; margin-top: 5%; margin-bottom: 5%; padding: 5%; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.367);
+    background-image:url(imagens/painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
+    <h1 id="restos" style="color: #2b1600; font-size: 3.5vw; text-align:center;">Os restos</h1></div>
+
+    </body>
+  </html>
