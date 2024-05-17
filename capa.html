@@ -1,0 +1,66 @@
+<hmtl>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MJ_Cunha</title>
+    </head>
+
+    <body bgcolor="23,0,34"> 
+
+        <map id="map_ID" name="navigatemap">
+
+            <area target="_top" alt="Portefólio" title="portefolio" href="index.html" 
+            coords="608,561,1079,521,1615,573,1649,48,1101,67,584,52" shape="poly"
+            onMouseOut="navbar.src='imagens/pronto.jpg'" 
+            onMouseOver="navbar.src='imagens/portefolio.gif'">
+            
+            <area target="_top" alt="Curriculum" title="curriculum" href="cv/cv.html" coords="181,646,440,586,605,659,345,729" shape="poly"
+            onMouseOut="navbar.src='imagens/pronto.jpg'" 
+            onMouseOver="navbar.src='imagens/curiculum.gif'">
+
+            <area target="_top" alt="YouTube" title="youtube" href="https://www.youtube.com/@JoaoCunha-ey2tp/videos" coords="134,359,398,355,391,188,128,188" shape="poly"
+            onMouseOut="navbar.src='imagens/pronto.jpg'" 
+            onMouseOver="navbar.src='imagens/youtube.gif'">
+
+            </map> 
+  
+            <img src="imagens/pronto.jpg"
+                width="100%"
+                id="img_ID"
+               name="navbar" 
+               usemap="#navigatemap" />
+        
+            <script>
+                window.onload = function () {
+            var ImageMap = function (map, img) {
+                    var n,
+                        areas = map.getElementsByTagName('area'),
+                        len = areas.length,
+                        coords = [],
+                        previousWidth = 1920;
+                    for (n = 0; n < len; n++) {
+                        coords[n] = areas[n].coords.split(',');
+                    }
+                    this.resize = function () {
+                        var n, m, clen,
+                            x = img.offsetWidth / previousWidth;
+                        for (n = 0; n < len; n++) {
+                            clen = coords[n].length;
+                            for (m = 0; m < clen; m++) {
+                                coords[n][m] *= x;
+                            }
+                            areas[n].coords = coords[n].join(',');
+                        }
+                        previousWidth = img.offsetWidth;
+                        return true;
+                    };
+                    window.onresize = this.resize;
+                },
+                imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
+            imageMap.resize();
+            return;
+        }
+            </script>
+
+    </body>
+</html>
