@@ -10,31 +10,7 @@
     <div style="display: flex; height:fit-content; justify-content: center; margin: 3vw; box-shadow: -2px 2px 10px rgba(44, 37, 0, 0.367);
     background-image:url(painel.png); background-size: cover; background-attachment: fixed; border-radius: 10px;">
 
-        <div style="position:fixed; background-color: #ff800925; height:fit-content; padding-right:1.5vw; padding-left:1.5vw;
-        padding-bottom:1vw; padding-top:1vw; border-radius:5px; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.488); align-content: center;
-        top: 50%; left:5%;"><a style="text-decoration: none; color: #2b1600; font-size: 3vw;" onclick="cv.src='virar_frente_fechado.gif'"
-        onmouseenter="style='text-decoration: none; color: #2b1600; font-size: 3.5vw;'"
-        onmouseleave="style='text-decoration: none; color: #2b1600; font-size: 3vw;'" >Virar</a></div>
-
-        <div style="position:fixed; background-color: #ff800925; height:fit-content; padding-right:1.5vw; padding-left:1.5vw;
-        padding-bottom:1vw; padding-top:1vw; border-radius:5px; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.488); align-content: center;
-        top: 7%; left:20%;"><a style="text-decoration: none; color: #2b1600; font-size: 3vw;" onclick="cv.src='abrir_capa.gif'"
-        onmouseenter="style='text-decoration: none; color: #2b1600; font-size: 3.5vw;'"
-        onmouseleave="style='text-decoration: none; color: #2b1600; font-size: 3vw;'" >Abrir</a></div>
-
-        <div style="position:fixed; background-color: #ff800925; height:fit-content; padding-right:1.5vw; padding-left:1.5vw;
-        padding-bottom:1vw; padding-top:1vw; border-radius:5px; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.488); align-content: center;
-        top: 50%; right:5%;"><a style="text-decoration: none; color: #2b1600; font-size: 3vw;" onclick="cv.src='virar_tras_fechado.gif'"
-        onmouseenter="style='text-decoration: none; color: #2b1600; font-size: 3.5vw;'"
-        onmouseleave="style='text-decoration: none; color: #2b1600; font-size: 3vw;'" >Virar</a></div>
-
-        <div style="position:fixed; background-color: #ff800925; height:fit-content; padding-right:1.5vw; padding-left:1.5vw;
-        padding-bottom:1vw; padding-top:1vw; border-radius:5px; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.488); align-content: center;
-        bottom: 5%; right:20%;"><a style="text-decoration: none; color: #2b1600; font-size: 3vw;" onclick="cv.src='abrir_segunda_capa.gif'"
-        onmouseenter="style='text-decoration: none; color: #2b1600; font-size: 3.5vw;'"
-        onmouseleave="style='text-decoration: none; color: #2b1600; font-size: 3vw;'" >Abrir</a></div>
-             
-        <div style="position:absolute; background-color: #ff800925; height:fit-content; padding-right:1.5vw; padding-left:1.5vw;
+    <div style="position:absolute; background-color: #ff800925; height:fit-content; padding-right:1.5vw; padding-left:1.5vw;
         padding-bottom:1vw; padding-top:1vw; border-radius:5px; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.488); align-content: center;
         top:15%; right:7%;"><a style="text-decoration: none; color: #2b1600; font-size: 2.5vw;" href="../index.html"
         onmouseenter="style='text-decoration: none; color: #2b1600; font-size: 3vw;'"
@@ -44,10 +20,64 @@
         padding-bottom:1vw; padding-top:1vw; border-radius:5px; box-shadow: -2px 4px 10px rgba(44, 37, 0, 0.488); align-content: center;
         top: 15%; left: 7%;"><a style="text-decoration: none; color: #2b1600; font-size: 2.5vw;" href="../capa.html"
         onmouseenter="style='text-decoration: none; color: #2b1600; font-size: 3vw;'"
-        onmouseleave="style='text-decoration: none; color: #2b1600; font-size: 2.5vw;'" >Capa</a></div> 
-       
-        <img src="fechado.gif" width="80%" style="justify-items: center; align-self: center;" id="cv" name="cv"/> 
-   
+        onmouseleave="style='text-decoration: none; color: #2b1600; font-size: 2.5vw;'" >Capa</a></div>  
+    
+        <map id="map_ID" name="navigatemap">
+
+        <area target="_self" alt="fechar" title="fechar" onclick="navbar.src='9.gif'" coords="189,552,630,800" shape="rect">
+        <area target="_self" alt="abrir" title="abrir" onclick="navbar.src='4.gif'" coords="1259,557,1710,789" shape="rect">
+        <area target="_self" alt="virar" title="virar" onclick="navbar.src='2.gif'" coords="1472,1103,1918,1361" shape="rect">
+        <area target="_self" alt="virar" title="virar" onclick="navbar.src='3.gif'" coords="0,1105,422,1357" shape="rect">
+        <area target="_self" alt="virar" title="virar" onclick="navbar.src='6.gif'" coords="1477,1509,1918,1765" shape="rect">
+        <area target="_self" alt="virar" title="virar" onclick="navbar.src='7.gif'" coords="1,1507,425,1764" shape="rect">
+        <area target="_self" alt="abrir" title="abrir" onclick="navbar.src='5.gif'" coords="1255,2233,1711,2464" shape="rect">
+        <area target="_self" alt="fechar" title="fechar" onclick="navbar.src='8.gif'" coords="188,2236,632,2485" shape="rect">
+
+    </map> 
+
+    <img src="1.gif"
+        width="50%"
+        id="img_ID"
+       name="navbar" 
+       usemap="#navigatemap"
+     />
+
+     <style>@media (max-width: 800px) {
+        #img_ID { width: 95%; }
+        }</style>
+
+    <script>
+        window.onload = function () {
+    var ImageMap = function (map, img) {
+            var n,
+                areas = map.getElementsByTagName('area'),
+                len = areas.length,
+                coords = [],
+                previousWidth = 1920;
+            for (n = 0; n < len; n++) {
+                coords[n] = areas[n].coords.split(',');
+            }
+            this.resize = function () {
+                var n, m, clen,
+                    x = img.offsetWidth / previousWidth;
+                for (n = 0; n < len; n++) {
+                    clen = coords[n].length;
+                    for (m = 0; m < clen; m++) {
+                        coords[n][m] *= x;
+                    }
+                    areas[n].coords = coords[n].join(',');
+                }
+                previousWidth = img.offsetWidth;
+                return true;
+            };
+            window.onresize = this.resize;
+        },
+        imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
+    imageMap.resize();
+    return;
+}
+    </script>
+    
     </div>
 
 </body>
