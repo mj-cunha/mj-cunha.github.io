@@ -24,14 +24,14 @@
     
         <map id="map_ID" name="navigatemap">
 
-        <area target="_self" alt="fechar" title="fechar" onclick="navbar.src='9.gif'" coords="189,552,630,800" shape="rect">
-        <area target="_self" alt="abrir" title="abrir" onclick="navbar.src='4.gif'" coords="1259,557,1710,789" shape="rect">
-        <area target="_self" alt="virar" title="virar" onclick="navbar.src='2.gif'" coords="1472,1103,1918,1361" shape="rect">
-        <area target="_self" alt="virar" title="virar" onclick="navbar.src='3.gif'" coords="0,1105,422,1357" shape="rect">
-        <area target="_self" alt="virar" title="virar" onclick="navbar.src='6.gif'" coords="1477,1509,1918,1765" shape="rect">
-        <area target="_self" alt="virar" title="virar" onclick="navbar.src='7.gif'" coords="1,1507,425,1764" shape="rect">
-        <area target="_self" alt="abrir" title="abrir" onclick="navbar.src='5.gif'" coords="1255,2233,1711,2464" shape="rect">
-        <area target="_self" alt="fechar" title="fechar" onclick="navbar.src='8.gif'" coords="188,2236,632,2485" shape="rect">
+        <area  alt="fechar" title="fechar" id="9" coords="189,552,630,800" shape="rect">
+        <area  alt="abrir" title="abrir" id="4" coords="1259,557,1710,789" shape="rect">
+        <area  alt="virar" title="virar" id="2" coords="1472,1103,1918,1361" shape="rect">
+        <area  alt="virar" title="virar" id="3" coords="0,1105,422,1357" shape="rect">
+        <area  alt="virar" title="virar" id="6" coords="1477,1509,1918,1765" shape="rect">
+        <area  alt="virar" title="virar" id="7" coords="1,1507,425,1764" shape="rect">
+        <area  alt="abrir" title="abrir" id="5" coords="1255,2233,1711,2464" shape="rect">
+        <area  alt="fechar" title="fechar" id="8" coords="188,2236,632,2485" shape="rect">
 
     </map> 
 
@@ -69,24 +69,8 @@
             }));
         }
         return Promise.all(promises);
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-            preloadImages(imageUrls)
-                .then(() => {
-                    console.log('All images preloaded successfully.');
-                    // Now you can safely use the images.
-                })
-                .catch((error) => {
-                    console.error('Error preloading images:', error);
-                });
-        });
-
-function changeImage(newImageSrc) {
-            const imgElement = document.getElementById('img_ID');
-            imgElement.src = newImageSrc;
-        };
-
+    }
+    
     window.onload = function () {
     var ImageMap = function (map, img) {
             var n,
@@ -113,14 +97,46 @@ function changeImage(newImageSrc) {
             window.onresize = this.resize;
         },
         imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
-    imageMap.resize(); 
-    document.getElementById("img_ID").addEventListener("click", function(event){
-  event.preventDefault();
-})
+    imageMap.resize();
     return;
-    
-
 };
+
+function changeImage(newImageSrc) {
+        const imgElement = document.getElementById('img_ID');
+        imgElement.src = newImageSrc;
+    }
+
+    document.getElementById("2").addEventListener("click", function(event) {
+        event.stopPropagation();
+        changeImage("2.gif");});
+    
+    document.getElementById("3").addEventListener("click", function(event) {
+        event.stopPropagation();
+        changeImage("3.gif");});
+
+    document.getElementById("4").addEventListener("click", function(event) {
+        event.stopPropagation();
+        changeImage("4.gif");});
+
+    document.getElementById("5").addEventListener("click", function(event) {
+        event.stopPropagation();
+        changeImage("5.gif");});
+
+    document.getElementById("6").addEventListener("click", function(event) {
+        event.stopPropagation();
+        changeImage("6.gif");});
+
+    document.getElementById("7").addEventListener("click", function(event) {
+        event.stopPropagation();
+        changeImage("7.gif");});
+
+    document.getElementById("8").addEventListener("click", function(event) {
+        event.stopPropagation();
+        changeImage("8.gif");});
+
+    document.getElementById("9").addEventListener("click", function(event) {
+        event.stopPropagation();
+        changeImage("9.gif");});
 
 </script>
     
