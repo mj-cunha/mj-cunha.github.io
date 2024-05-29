@@ -71,13 +71,21 @@
         return Promise.all(promises);
     };
 
-    
+    document.addEventListener('DOMContentLoaded', () => {
+            preloadImages(imageUrls)
+                .then(() => {
+                    console.log('All images preloaded successfully.');
+                    // Now you can safely use the images.
+                })
+                .catch((error) => {
+                    console.error('Error preloading images:', error);
+                });
+        });
+
 function changeImage(newImageSrc) {
             const imgElement = document.getElementById('img_ID');
             imgElement.src = newImageSrc;
-        }
-;
-
+        };
 
     window.onload = function () {
     var ImageMap = function (map, img) {
