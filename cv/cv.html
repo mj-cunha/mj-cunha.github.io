@@ -46,8 +46,40 @@
         #img_ID { width: 95%; }
         }</style>
 
-    <script>
-        window.onload = function () {
+<script>
+    const imageUrls = [
+        '1.gif',
+        '2.gif',
+        '3.gif',
+        '4.gif',
+        '5.gif',
+        '6.gif',
+        '7.gif',
+        '8.gif',
+        '9.gif'
+    ];
+
+    function preloadImages(imageUrls) {
+        const promises = [];
+        for (const url of imageUrls) {
+            const img = new Image();
+            img.src = url;
+            promises.push(new Promise((resolve) => {
+                img.onload = resolve;
+            }));
+        }
+        return Promise.all(promises);
+    };
+
+    
+function changeImage(newImageSrc) {
+            const imgElement = document.getElementById('img_ID');
+            imgElement.src = newImageSrc;
+        }
+;
+
+
+    window.onload = function () {
     var ImageMap = function (map, img) {
             var n,
                 areas = map.getElementsByTagName('area'),
@@ -75,41 +107,13 @@
         imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
     imageMap.resize();
     return;
+    
+    document.getElementById("img_ID").addEventListener("click", function(event){
+  event.preventDefault();
+})
 };
 
-const imageUrls = [
-            '1.gif',
-            '2.gif',
-            '3.gif',
-            '4.gif',
-            '5.gif',
-            '6.gif',
-            '7.gif',
-            '8.gif',
-            '9.gif'
-        ];
-
-        function preloadImages(imageUrls) {
-            const promises = [];
-            for (const url of imageUrls) {
-                const img = new Image();
-                img.src = url;
-                promises.push(new Promise((resolve) => {
-                    img.onload = resolve;
-                }));
-            }
-            return Promise.all(promises);
-        };
-
-function changeImage(newImageSrc) {
-            const imgElement = document.getElementById('img_ID');
-            imgElement.src = newImageSrc;
-        }
-
-    document.getElementById("img_ID").addEventListener("click", function(event){
-  event.preventDefault()
-})
-    </script>
+</script>
     
     </div>
 
