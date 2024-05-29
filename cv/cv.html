@@ -105,12 +105,13 @@ function changeImage(newImageSrc) {
             window.onresize = this.resize;
         },
         imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
-    imageMap.resize();
-    return;
-    
+    imageMap.resize(); 
     document.getElementById("img_ID").addEventListener("click", function(event){
   event.preventDefault();
 })
+    return;
+    
+
 };
 
 </script>
