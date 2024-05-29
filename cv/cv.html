@@ -3,14 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="9.gif" as="image" type="image" />
-    <link rel="preload" href="4.gif" as="image" type="image" />
-    <link rel="preload" href="2.gif" as="image" type="image" />
-    <link rel="preload" href="3.gif" as="image" type="image" />
-    <link rel="preload" href="6.gif" as="image" type="image" />
-    <link rel="preload" href="7.gif" as="image" type="image" />
-    <link rel="preload" href="5.gif" as="image" type="image" />
-    <link rel="preload" href="8.gif" as="image" type="image" />
     <title>CV_da_Cunha</title>
 </head>
 <body background="fundo.png" width="100%">
@@ -83,7 +75,31 @@
         imageMap = new ImageMap(document.getElementById('map_ID'), document.getElementById('img_ID'));
     imageMap.resize();
     return;
-}
+};
+
+const imageUrls = [
+            '1.gif',
+            '2.gif',
+            '3.gif',
+            '4.gif',
+            '5.gif',
+            '6.gif',
+            '7.gif',
+            '8.gif',
+            '9.gif'
+        ];
+
+        function preloadImages(imageUrls) {
+            const promises = [];
+            for (const url of imageUrls) {
+                const img = new Image();
+                img.src = url;
+                promises.push(new Promise((resolve) => {
+                    img.onload = resolve;
+                }));
+            }
+            return Promise.all(promises);
+        };
 
 function changeImage(newImageSrc) {
             const imgElement = document.getElementById('img_ID');
@@ -92,7 +108,7 @@ function changeImage(newImageSrc) {
 
     document.getElementById("img_ID").addEventListener("click", function(event){
   event.preventDefault()
-});
+})
     </script>
     
     </div>
