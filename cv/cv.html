@@ -84,6 +84,15 @@
     imageMap.resize();
     return;
 }
+
+function changeImage(newImageSrc) {
+            const imgElement = document.getElementById('img_ID');
+            imgElement.src = newImageSrc;
+        }
+
+    document.getElementById("img_ID").addEventListener("click", function(event){
+  event.preventDefault()
+});
     </script>
     
     </div>
